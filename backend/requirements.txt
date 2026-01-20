@@ -1,0 +1,16 @@
+fastapi==0.115.2
+uvicorn[standard]==0.30.6
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.9   # optional if not using Postgres
+PyMySQL==1.1.1           # optional if not using MySQL
+pydantic==2.9.2
+python-dotenv==1.0.1
+passlib[bcrypt]==1.7.4
+ortools==9.10.4067
+jinja2==3.1.4
+weasyprint==62.3
+aiosmtplib==3.0.1
+pandas==2.2.3
+openpyxl==3.1.5
+pyjwt==2.9.0
+python-multipart

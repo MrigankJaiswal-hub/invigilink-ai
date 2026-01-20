@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Seating Plan – CUJ</title>
+  <style>
+    body { font-family: Arial, sans-serif; color:#111; font-size: 11px; margin: 24px; }
+    .header { text-align: center; margin-bottom: 4px; }
+    .header h1 { margin: 0; font-size: 18px; text-transform: uppercase; }
+    .header h2 { margin: 2px 0 0 0; font-size: 14px; font-weight: normal; }
+
+    .building-title {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .sub-header {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 0.7px solid #999; padding: 4px 6px; font-size: 11px; vertical-align: top; }
+    th { background: #f2f2f2; text-align: left; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Central University of Jammu</h1>
+    <h2>Office of the Controller of Examinations</h2>
+  </div>
+
+  <!-- Building name centred at top -->
+  <div class="building-title">
+    {{ building_name or "Aryabhatta Block" }}
+  </div>
+
+  <div class="sub-header">
+    <strong>Seating Plan – Theory Examinations</strong>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 8%;">Seat No.</th>
+        <th style="width: 20%;">Roll No.</th>
+        <th style="width: 18%;">Room No.</th>
+        <th style="width: 14%;">Floor</th>
+        <th style="width: 20%;">Venue</th>
+        <th>Course Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <!-- Seat number from DB (per room) -->
+        <td>{{ r.seat_no }}</td>
+        <td>{{ r.roll_no }}</td>
+        <td>{{ r.room_code }}</td>
+
+        <!-- Floor -->
+        <td>
+          {% if r.floor is defined and r.floor %}
+            {{ r.floor }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+
+        <!-- Venue / Building -->
+        <td>
+          {% if r.venue is defined and r.venue %}
+            {{ r.venue }}
+          {% else %}
+            {{ building_name or "Aryabhatta Block" }}
+          {% endif %}
+        </td>
+
+        <!-- Subject name (per row; for combined PDF, this may differ per exam) -->
+        <td>{{ r.subject_name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

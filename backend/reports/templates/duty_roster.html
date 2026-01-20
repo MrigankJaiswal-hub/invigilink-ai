@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Duty Roster</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    h1 { margin-bottom: 8px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 6px 8px; font-size: 14px; }
+    th { background: #f2f2f2; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Duty Roster</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>When</th>
+        <th>Slot</th>
+        <th>Room / Label</th>
+        <th>Professor</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td>{{ date }}</td>
+        <td>{{ slot }}</td>
+        <td>{{ r.room }}</td>
+        <td>{{ r.prof }}</td>
+        <td>{{ r.email }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

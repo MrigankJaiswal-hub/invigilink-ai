@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    body{font-family: system-ui, Arial;}
+    h1{margin:0 0 8px}
+    h3{margin:12px 0 6px}
+    table{width:100%;border-collapse:collapse}
+    th,td{border:1px solid #ddd;padding:6px;font-size:12px;text-align:left}
+    .meta{margin:6px 0 12px;color:#444}
+  </style>
+</head>
+<body>
+  <h1>Seating Plan</h1>
+  <div class="meta">Course: {{ course_name }} ({{ course_code }}) | Date: {{ date }} | Slot: {{ slot }}</div>
+  {% for room in rooms %}
+    <h3>Room {{ room.code }}</h3>
+    <table>
+      <thead><tr><th>Seat</th><th>Roll No</th><th>Name</th></tr></thead>
+      <tbody>
+      {% for row in room.rows %}
+        <tr><td>{{ row.seat }}</td><td>{{ row.roll }}</td><td>{{ row.name }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endfor %}
+</body>
+</html>

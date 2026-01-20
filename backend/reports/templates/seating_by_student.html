@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Seating Plan – CUJ (By Student)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #111;
+      font-size: 11px;
+      margin: 24px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .header h2 {
+      margin: 2px 0 0 0;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .building-title {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .sub-header {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 0.7px solid #999;
+      padding: 4px 6px;
+      font-size: 11px;
+      vertical-align: top;
+    }
+    th {
+      background: #f2f2f2;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Central University of Jammu</h1>
+    <h2>Office of the Controller of Examinations</h2>
+  </div>
+
+  <!-- Building name from rooms.building -->
+  <div class="building-title">
+    {{ building_name or "Exam Halls" }}
+  </div>
+
+  <div class="sub-header">
+    {% if rows and rows|length > 0 %}
+      <strong>
+        Seating Plan – By Student (All Courses)
+        &nbsp;|&nbsp;
+        Date: {{ rows[0].date }} &nbsp; Slot: {{ rows[0].slot }}
+      </strong>
+    {% else %}
+      <strong>Seating Plan – By Student (All Courses)</strong>
+    {% endif %}
+    {% if filter_label %}
+      <br/>Department: {{ filter_label }}
+    {% endif %}
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 8%;">Seat No.</th>
+        <th style="width: 16%;">Roll No.</th>
+        <th style="width: 22%;">Student Name</th>
+        <th style="width: 10%;">Room No.</th>
+        <th style="width: 8%;">Floor</th>
+        <th style="width: 36%;">Courses (Code — Title)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.seat_no }}</td>
+        <td>{{ r.roll_no }}</td>
+        <td>{{ r.student_name }}</td>
+        <td>{{ r.room_code }}</td>
+        <td>
+          {% if r.floor %}
+            {{ r.floor }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <!-- All enrolled courses (one per line) -->
+        <td style="white-space: pre-line;">
+          {% if r.courses %}
+            {{ r.courses }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

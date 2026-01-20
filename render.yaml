@@ -1,0 +1,40 @@
+services:
+  # -----------------------------
+  # FastAPI Backend (Invigilink-AI)
+  # -----------------------------
+  - type: web
+    name: invigilink-ai-backend
+    runtime: python
+    region: singapore        # closest & cheapest for India
+    plan: free               # change to starter/pro if needed
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: |
+      uvicorn main:app --host 0.0.0.0 --port 8080
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: invigilink-ai-db
+          property: connectionString
+
+      - key: ENV
+        value: production
+
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+      # Optional but recommended
+      - key: TZ
+        value: Asia/Kolkata
+
+    autoDeploy: true
+
+  # -----------------------------
+  # PostgreSQL Database
+  # -----------------------------
+databases:
+  - name: invigilink-ai-db
+    region: singapore
+    plan: free
+    postgresMajorVersion: 15
