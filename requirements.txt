@@ -21,7 +21,8 @@ bcrypt==4.1.2
 # File Uploads & Parsing
 # -------------------------
 python-multipart==0.0.9
-pandas==2.2.0
+pandas==2.2.2
+numpy==1.26.4
 
 # -------------------------
 # Templates & PDFs
