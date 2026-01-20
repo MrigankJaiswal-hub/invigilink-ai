@@ -38,3 +38,14 @@ databases:
     region: singapore
     plan: free
     postgresMajorVersion: 15
+
+services:
+  - type: web
+    name: invigilink-ai
+    env: python
+    plan: free
+    buildCommand: |
+      apt-get update
+      apt-get install -y wkhtmltopdf
+      pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
