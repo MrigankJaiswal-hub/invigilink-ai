@@ -16,6 +16,7 @@ origins = [
     "http://10.215.91.252:3000",
     "http://localhost:3000",
     "http://10.0.0.0/8",
+    "https://invigilink-backend.onrender.com",
 ]
 
 app.add_middleware(
