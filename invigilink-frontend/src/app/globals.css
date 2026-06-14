@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light custom tokens that don’t depend on Tailwind’s build */
+:root {
+  --ink: #111827;
+  --subtext: #6b7280;
+  --card: #0b1220;
+  --card-border: rgba(255,255,255,0.08);
+}
+
+/* Optional utility-like classes without @apply (avoids build issues) */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+}
+.card-header {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--card-border);
+}
+.card-body { padding: 1rem; }
+
+.input {
+  width: 100%;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--card-border);
+}
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+
