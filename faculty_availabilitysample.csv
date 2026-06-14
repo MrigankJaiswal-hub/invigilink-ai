@@ -1,0 +1,21 @@
+employee_code,professor_name,designation,exam_date,slot,available
+ECE001,Prof. A ECE,Assistant Professor,2025-12-08,FN,true
+ECE001,Prof. A ECE,Assistant Professor,2025-12-10,FN,true
+ECE001,Prof. A ECE,Assistant Professor,2025-12-12,FN,true
+,,,,,
+ECE002,Prof. B ECE,Assistant Professor,2025-12-09,FN,true
+ECE002,Prof. B ECE,Assistant Professor,2025-12-13,FN,true
+,,,,,
+MATH001,Prof. M Math,Associate Professor,2025-12-08,FN,true
+MATH001,Prof. M Math,Associate Professor,2025-12-10,FN,true
+MATH001,Prof. M Math,Associate Professor,2025-12-11,FN,true
+MATH001,Prof. M Math,Associate Professor,2025-12-16,FN,true
+,,,,,
+PHY001,Prof. P Physics,Assistant Professor,2025-12-08,AN,true
+PHY001,Prof. P Physics,Assistant Professor,2025-12-10,AN,true
+PHY001,Prof. P Physics,Assistant Professor,2025-12-12,AN,true
+,,,,,
+ZOO001,Prof. Z Zoology,Assistant Professor,2025-12-08,AN,true
+ZOO001,Prof. Z Zoology,Assistant Professor,2025-12-09,AN,true
+ZOO001,Prof. Z Zoology,Assistant Professor,2025-12-10,AN,true
+ZOO001,Prof. Z Zoology,Assistant Professor,2025-12-11,AN,true

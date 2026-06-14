@@ -37,7 +37,6 @@ backend/.venv/
 .env
 .env.*
 !.env.example
-.env.example
 
 # Python cache
 __pycache__/
@@ -60,14 +59,17 @@ alembic/versions/__pycache__/
 # =====================================
 # PDF / CSV / Upload artifacts
 # =====================================
-uploads/
+# Ignore generated reports only
 generated/
+uploads/
 tmp/
-*.pdf
-*.csv
 
-# (keep sample CSVs)
-!samples/*.csv
+# Keep project CSV templates and documentation
+!*.csv
+!sql/**/*.csv
+!backend/**/*.csv
+!docs/**/*.pdf
+!docs/**/*.md
 
 # =====================================
 # wkhtmltopdf / temp render files

@@ -1,0 +1,5 @@
+employee_code,professor_name,exam_date,slot,available,designation,department_id
+CUJ-ECE-01,Dr. A Sharma,2025-11-28,FN,yes,Professor,1
+CUJ-ECE-02,Dr. R Mehta,2025-11-28,AN,yes,Associate Professor,1
+CUJ-MBA-01,Dr. Kriti Verma,2025-11-28,FN,yes,Assistant Professor,2
+CUJ-MBA-02,Dr. Manoj Singh,2025-11-28,AN,no,Assistant Professor,2

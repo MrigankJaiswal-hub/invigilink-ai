@@ -1,0 +1,7 @@
+code_prefix,degree_type,level,department_name,school_name,department_id,course_prefix,roll_pattern
+MMBA,MBA,PG,Marketing and Supply Chain Management,School of Business Studies,,MMBA,"^\d{2}MMBA\d+$"
+BBAU,BBA,UG,Marketing and Supply Chain Management,School of Business Studies,,BBAU,"^\d{2}BBAU\d+$"
+BEECE,B.Tech,UG,Electronics and Communication Engineering,School of Engineering,,BEECE,"^\d{2}BEECE\d+$"
+BEECA,B.Tech,UG,Computer Science and Engineering,School of Engineering,,BEECA,"^\d{2}BEECA\d+$"
+MSCENV,M.Sc,PG,Environmental Sciences,School of Life Sciences,,MSCENV,"^\d{2}MSCENV\d+$"
+MSCSIT,M.Sc,PG,Computer Science and Information Technology,School of Basic and Applied Sciences,,MSCSIT,"^\d{2}MSCSIT\d+$"

@@ -1,0 +1,20 @@
+course_code,course_name,department,duration_minutes,exam_date,school,slot,exam_type
+BEECE1C01,Introduction to Electronics,Electronics and Communication Engineering,180,2025-12-08,School of Engineering,FN,REGULAR
+BEECE1C02,Basic Electrical and Electronics,Electronics and Communication Engineering,180,2025-12-10,School of Engineering,FN,REGULAR
+BEECE1C03,English for Technical Communication,Electronics and Communication Engineering,180,2025-12-12,School of Engineering,FN,REGULAR
+BEECE2C301,Analog Communication,Electronics and Communication Engineering,180,2025-12-09,School of Engineering,FN,REGULAR
+BEECE2C302,Python Programming,Electronics and Communication Engineering,180,2025-12-13,School of Engineering,FN,REGULAR
+
+IMAT1C001T,Calculus,Mathematics,180,2025-12-08,School of Basic and Applied Sciences,FN,REAPPEAR
+IMAT1C002T,Theory of Matrices,Mathematics,180,2025-12-10,School of Basic and Applied Sciences,FN,REAPPEAR
+IMAT2C001T,Introduction to Number Theory,Mathematics,180,2025-12-11,School of Basic and Applied Sciences,FN,REGULAR
+IMAT2C002T,Multivariable Calculus,Mathematics,180,2025-12-16,School of Basic and Applied Sciences,FN,REGULAR
+
+MPHY1C01,Classical Mechanics,Physics and Astronomical Sciences,180,2025-12-08,School of Basic and Applied Sciences,AN,REGULAR
+MPHY1C02,Quantum Mechanics,Physics and Astronomical Sciences,180,2025-12-10,School of Basic and Applied Sciences,AN,REGULAR
+MPHY1C03,Integrated Electronics,Physics and Astronomical Sciences,180,2025-12-12,School of Basic and Applied Sciences,AN,REGULAR
+
+IZOO4C001T,Cell and Molecular Biology,Zoology,180,2025-12-08,School of Life Sciences,AN,REGULAR
+IZOO4C002T,Biochemistry,Zoology,180,2025-12-10,School of Life Sciences,AN,REGULAR
+ICZOL5C001T,Animal Taxonomy,Zoology,180,2025-12-09,School of Life Sciences,AN,REGULAR
+ICZOL5C002T,Endocrinology,Zoology,180,2025-12-11,School of Life Sciences,AN,REGULAR
