@@ -986,7 +986,7 @@ def designation_summary(s: Session = Depends(db)):
         SELECT
             id,
             name,
-            COALESCE(designation, 'Assistant') AS designation,
+            COALESCE(designation::text, 'ASSISTANT_PROFESSOR') AS designation,
             max_duties
         FROM professors
         ORDER BY name
@@ -1049,7 +1049,7 @@ def designation_summary(s: Session = Depends(db)):
 #         "count": len(out),
 #         "rows": out,
 #     }
-
+ 
 # -----------------
 # Seating generator (single exam)
 # -----------------
